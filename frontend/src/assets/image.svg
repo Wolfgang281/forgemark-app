@@ -1,0 +1,48 @@
+<svg width="640" height="480" viewBox="0 0 640 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="480" rx="16" fill="#FAFAFA"/>
+
+  <!-- window chrome -->
+  <rect x="0" y="0" width="640" height="44" rx="16" fill="#F4F4F5"/>
+  <rect x="0" y="28" width="640" height="16" fill="#F4F4F5"/>
+  <circle cx="24" cy="22" r="5" fill="#E4E4E7"/>
+  <circle cx="42" cy="22" r="5" fill="#E4E4E7"/>
+  <circle cx="60" cy="22" r="5" fill="#E4E4E7"/>
+  <rect x="220" y="14" width="200" height="16" rx="8" fill="#E4E4E7"/>
+
+  <!-- sidebar -->
+  <rect x="24" y="68" width="140" height="20" rx="4" fill="#18181B"/>
+  <rect x="24" y="104" width="110" height="10" rx="3" fill="#D4D4D8"/>
+  <rect x="24" y="126" width="120" height="10" rx="3" fill="#D4D4D8"/>
+  <rect x="24" y="148" width="90" height="10" rx="3" fill="#D4D4D8"/>
+  <rect x="24" y="170" width="115" height="10" rx="3" fill="#D4D4D8"/>
+
+  <!-- product cards -->
+  <rect x="24" y="210" width="180" height="130" rx="10" fill="#FFFFFF" stroke="#E4E4E7" stroke-width="1.5"/>
+  <rect x="40" y="226" width="148" height="70" rx="6" fill="#F4F4F5"/>
+  <rect x="40" y="308" width="110" height="10" rx="3" fill="#18181B"/>
+  <rect x="40" y="324" width="70" height="8" rx="3" fill="#A1A1AA"/>
+
+  <rect x="216" y="210" width="180" height="130" rx="10" fill="#FFFFFF" stroke="#E4E4E7" stroke-width="1.5"/>
+  <rect x="232" y="226" width="148" height="70" rx="6" fill="#F4F4F5"/>
+  <rect x="232" y="308" width="110" height="10" rx="3" fill="#18181B"/>
+  <rect x="232" y="324" width="70" height="8" rx="3" fill="#A1A1AA"/>
+
+  <rect x="408" y="210" width="208" height="130" rx="10" fill="#18181B"/>
+  <rect x="424" y="226" width="176" height="70" rx="6" fill="#FFFFFF" fill-opacity="0.08"/>
+  <rect x="424" y="308" width="110" height="10" rx="3" fill="#FAFAFA"/>
+  <rect x="424" y="324" width="70" height="8" rx="3" fill="#A1A1AA"/>
+
+  <!-- bottom stat row -->
+  <rect x="24" y="366" width="592" height="90" rx="10" fill="#FFFFFF" stroke="#E4E4E7" stroke-width="1.5"/>
+  <rect x="48" y="388" width="60" height="10" rx="3" fill="#A1A1AA"/>
+  <rect x="48" y="404" width="90" height="18" rx="4" fill="#18181B"/>
+
+  <rect x="190" y="388" width="60" height="10" rx="3" fill="#A1A1AA"/>
+  <rect x="190" y="404" width="90" height="18" rx="4" fill="#18181B"/>
+
+  <rect x="332" y="388" width="60" height="10" rx="3" fill="#A1A1AA"/>
+  <rect x="332" y="404" width="90" height="18" rx="4" fill="#18181B"/>
+
+  <path d="M480 430 L505 400 L530 415 L560 380" stroke="#18181B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="560" cy="380" r="4" fill="#18181B"/>
+</svg>

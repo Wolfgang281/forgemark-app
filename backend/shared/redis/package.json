@@ -1,0 +1,12 @@
+{
+  "name": "@pixelpeti/redis",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./redis.ts"
+  },
+  "dependencies": {
+    "ioredis": "^6.0.0"
+  }
+}
