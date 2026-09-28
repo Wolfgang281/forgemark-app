@@ -32,12 +32,12 @@ frontend/
   src/
     pages/                 # route-level composition (thin, no business logic inline)
     components/
-      home/                # page-specific sections
-      layout/               # header/footer, shared across pages
-      ui/                  # shadcn-generated primitives
-    data/                  # static content, typed
-    lib/                   # shared utilities (animation variants, etc.)
-    utils/                 # axios instance, firebase client config
+      home/, partner/, admin/   # page-specific sections
+      layout/, auth/            # shared across pages (nav/footer, route guard)
+      ui/                       # shadcn-generated primitives
+    redux/                 # store + slices
+    data/                  # static/mock content, typed
+    lib/, utils/, hooks/   # shared helpers, axios/firebase clients, hooks
 ```
 
 ## Current state
@@ -46,11 +46,11 @@ Working end to end:
 - Google sign-in via Firebase, verified server-side with the Firebase Admin SDK
 - Session issuing/cleanup through Redis, session ID stored in an httpOnly cookie
 - Gateway to auth service proxying
+- Role-based route protection on the frontend (`/partner`, `/admin`)
 
 Not built yet:
-- Actual product catalog / listings (the homepage categories are static UI, not backed by data)
-- Checkout, payments, seller payouts
-- Any authorization/role logic beyond "logged in or not"
+- Actual product catalog, checkout, payments, seller payouts (Partner/Admin dashboards are real UI wired to placeholder data, not live APIs)
+- Server-side authorization on any admin/partner-specific endpoint (none exist yet)
 
 ## Running it locally
 
