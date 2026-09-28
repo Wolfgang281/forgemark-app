@@ -19,7 +19,7 @@ export function SiteHeader({ onSignInClick }: SiteHeaderProps) {
             alt="Forgemark logo"
             className="h-6 w-6 rounded-sm object-contain"
           />
-          <span className="text-lg font-semibold tracking-tight">
+          <span className="font-heading text-lg font-medium tracking-tight">
             Forgemark
           </span>
         </div>

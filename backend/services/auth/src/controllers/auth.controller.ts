@@ -24,7 +24,12 @@ export const loginOrRegister = async (req: Request, res: Response) => {
     const sessionID = randomUUID();
     await redis.set(
       `session:${sessionID}`,
-      JSON.stringify({ userID: user._id }),
+      JSON.stringify({
+        userID: user._id,
+        name: user.name,
+        email: user.email,
+        role: user.role,
+      }),
       "EX",
       3600,
     ); // Expire in 1 hour
@@ -39,12 +44,11 @@ export const loginOrRegister = async (req: Request, res: Response) => {
     res
       .status(200)
       .json({ success: true, message: "Login/Register successful", user });
-  } catch (error: any) {
-    console.log("Error in loginOrRegister controller:", error);
+  } catch (error) {
+    console.error("Error in loginOrRegister controller:", error);
     res.status(500).json({
       success: false,
       message: "Internal server error",
-      error: error.message || "Unknown error",
     });
   }
 };
@@ -65,13 +69,11 @@ export const logout = async (req: Request, res: Response) => {
     return res
       .status(200)
       .json({ success: true, message: "User logged out successfully" });
-  } catch (error: any) {
-    console.log(`Error while logging out a user`);
-    console.log(JSON.stringify(error, null, 2));
+  } catch (error) {
+    console.error("Error while logging out a user:", error);
     res.status(500).json({
       success: false,
       message: "Internal server error",
-      error: error.message || "Unknown error",
     });
   }
 };

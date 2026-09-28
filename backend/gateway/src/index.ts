@@ -1,17 +1,17 @@
-import dotenv from "dotenv";
-dotenv.config();
-
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import express from "express";
 import proxy from "express-http-proxy";
 import morgan from "morgan";
+import { env } from "./configs/env.config.js";
+import { getCurrentUser } from "./controllers/user.controller.js";
+import { authenticate } from "./middlewares/auth.middleware.js";
 
 const app = express();
 
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL as string,
+    origin: env.FRONTEND_URL,
     credentials: true,
   }),
 );
@@ -20,12 +20,10 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(morgan("dev"));
 
-app.use("/api/auth", proxy(process.env.AUTH_SERVICE_URL as string));
+app.get("/api/me", authenticate, getCurrentUser);
 
-app.listen(process.env.PORT, (error) => {
-  if (error) {
-    console.error("Error starting Gateway Server:", error);
-  } else {
-    console.log(`Gateway Server is running on port ${process.env.PORT}`);
-  }
+app.use("/api/auth", proxy(env.AUTH_SERVICE_URL));
+
+app.listen(env.PORT, () => {
+  console.log(`Gateway Server is running on port ${env.PORT}`);
 });

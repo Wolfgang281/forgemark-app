@@ -13,7 +13,7 @@ export function CategoriesSection() {
         className="mb-8 flex flex-col items-center justify-between gap-2 text-center sm:mb-10 sm:flex-row sm:text-left"
       >
         <div>
-          <h2 className="text-lg font-semibold tracking-tight">
+          <h2 className="font-heading text-2xl font-medium tracking-tight">
             Popular Categories
           </h2>
           <p className="mt-1 text-sm text-muted-foreground">
@@ -22,26 +22,26 @@ export function CategoriesSection() {
         </div>
       </motion.div>
 
-      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 md:grid-cols-5">
-        {categories.map((cat, i) => {
-          const Icon = cat.icon;
+      <div className="grid grid-cols-1 divide-y divide-border border-t border-border sm:grid-cols-2 sm:divide-x sm:divide-y-0 lg:grid-cols-5">
+        {categories.map((category, index) => {
+          const Icon = category.icon;
           return (
             <motion.div
-              key={cat.title}
+              key={category.title}
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, amount: 0.3 }}
               variants={fadeUp}
-              transition={{ delay: i * 0.06 }}
-              whileHover={{ y: -3 }}
-              className="group flex flex-col items-center gap-3 rounded-xl border border-border bg-card px-4 py-7 text-center shadow-sm transition-shadow hover:border-foreground/20 hover:shadow-md"
+              transition={{ delay: index * 0.06 }}
+              className="group flex items-center gap-4 px-5 py-6 transition-colors hover:bg-muted/40 sm:flex-col sm:items-start sm:gap-6"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-muted transition-colors group-hover:bg-foreground group-hover:text-background">
-                <Icon className="h-6 w-6" />
-              </div>
-              <span className="text-sm font-medium text-muted-foreground transition-colors group-hover:text-foreground">
-                {cat.title}
+              <span className="font-heading text-3xl text-muted-foreground/40 transition-colors group-hover:text-foreground/70">
+                {String(index + 1).padStart(2, "0")}
               </span>
+              <div className="flex items-center gap-2">
+                <Icon className="h-4 w-4 text-muted-foreground" />
+                <span className="text-sm font-medium">{category.title}</span>
+              </div>
             </motion.div>
           );
         })}

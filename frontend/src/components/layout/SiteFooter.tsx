@@ -11,7 +11,7 @@ export function SiteFooter() {
             alt="Forgemark logo"
             className="h-6 w-6 rounded-sm object-contain"
           />
-          <span className="text-base font-semibold">Forgemark</span>
+          <span className="font-heading text-base font-medium">Forgemark</span>
         </div>
 
         <p className="max-w-sm text-sm text-background/70">

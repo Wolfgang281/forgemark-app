@@ -16,7 +16,7 @@ const userSchema = new mongoose.Schema<IUser>(
     password: { type: String, required: true, select: false, trim: true },
     role: { type: String, enum: ["partner", "admin"], default: "partner" },
     partnerProfile: {
-      slug: { type: String, trim: true, unique: true, index: true },
+      slug: { type: String, trim: true, unique: true, sparse: true },
       website: { type: String, trim: true, default: "" },
       bio: { type: String, trim: true, default: "" },
       socialLinks: {

@@ -31,7 +31,7 @@ export function SignInDialog({
               className="h-8 w-8 object-contain"
             />
           </div>
-          <DialogTitle className="mt-3 text-xl font-semibold tracking-tight">
+          <DialogTitle className="font-heading mt-3 text-2xl font-medium tracking-tight">
             Welcome to Forgemark
           </DialogTitle>
           <DialogDescription>

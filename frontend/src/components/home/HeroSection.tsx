@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { fadeUp } from "@/lib/motion";
-import heroImage from "@/assets/image.svg";
+import heroArt from "@/assets/hero-art.svg";
 import { motion } from "motion/react";
 
 interface HeroSectionProps {
@@ -24,7 +24,7 @@ export function HeroSection({ onCtaClick }: HeroSectionProps) {
           <span className="inline-flex items-center rounded-full border border-border bg-muted px-3 py-1 text-xs font-medium tracking-wide text-muted-foreground">
             BUILT FOR CREATORS
           </span>
-          <h1 className="text-3xl font-semibold leading-[1.1] tracking-tight text-balance sm:text-4xl md:text-5xl">
+          <h1 className="font-heading text-4xl leading-[1.05] font-medium text-balance sm:text-5xl md:text-6xl">
             Discover premium digital products, built by{" "}
             <span className="relative inline-block">
               creators
@@ -62,8 +62,8 @@ export function HeroSection({ onCtaClick }: HeroSectionProps) {
           className="rounded-2xl border border-border bg-card p-4 shadow-lg shadow-black/5 transition-shadow hover:shadow-xl sm:p-6"
         >
           <img
-            src={heroImage}
-            alt="Digital products illustration"
+            src={heroArt}
+            alt="Abstract illustration representing the Forgemark marketplace"
             className="w-full rounded-lg object-cover"
           />
         </motion.div>

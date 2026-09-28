@@ -1,0 +1,35 @@
+<svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="640" rx="20" fill="#FAFAFA"/>
+
+  <!-- large soft field -->
+  <circle cx="420" cy="220" r="190" fill="#18181B" fill-opacity="0.06"/>
+
+  <!-- ring -->
+  <circle cx="180" cy="420" r="120" stroke="#18181B" stroke-opacity="0.15" stroke-width="1.5"/>
+
+  <!-- primary solid disc -->
+  <circle cx="300" cy="300" r="150" fill="#18181B"/>
+
+  <!-- offset card, layered on top -->
+  <rect x="330" y="120" width="220" height="280" rx="18" fill="#FFFFFF" stroke="#18181B" stroke-opacity="0.12" stroke-width="1.5"/>
+  <rect x="358" y="152" width="130" height="14" rx="7" fill="#18181B"/>
+  <rect x="358" y="182" width="164" height="10" rx="5" fill="#D4D4D8"/>
+  <rect x="358" y="200" width="140" height="10" rx="5" fill="#D4D4D8"/>
+  <rect x="358" y="236" width="164" height="120" rx="10" fill="#F4F4F5"/>
+  <path d="M372 330 L408 288 L440 312 L508 254" stroke="#18181B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="508" cy="254" r="5" fill="#18181B"/>
+
+  <!-- small floating accent square -->
+  <rect x="120" y="140" width="64" height="64" rx="14" fill="#18181B"/>
+  <rect x="140" y="160" width="24" height="24" rx="4" fill="#FAFAFA"/>
+
+  <!-- scattered dot texture -->
+  <circle cx="90" cy="500" r="4" fill="#18181B" fill-opacity="0.3"/>
+  <circle cx="120" cy="520" r="4" fill="#18181B" fill-opacity="0.3"/>
+  <circle cx="150" cy="500" r="4" fill="#18181B" fill-opacity="0.3"/>
+  <circle cx="540" cy="470" r="4" fill="#18181B" fill-opacity="0.25"/>
+  <circle cx="565" cy="495" r="4" fill="#18181B" fill-opacity="0.25"/>
+
+  <!-- monogram -->
+  <text x="222" y="332" font-family="Georgia, 'Times New Roman', serif" font-size="150" font-weight="600" fill="#FAFAFA">F</text>
+</svg>
